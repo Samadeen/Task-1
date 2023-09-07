@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body,
 html {
-  margin: 0;
-  padding: 0;
   height: 100%;
   overflow: hidden;
 }
@@ -13,23 +17,34 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  right: -75%;
-  width: 100%;
-  height: 100%;
+h1,
+h3,
+a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1; /* Ensure content is above the background */
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.container {
+  visibility: hidden;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.65rem;
+  max-width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hover-element {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  display: inline-block;
   cursor: pointer;
 }
 
@@ -44,15 +59,21 @@ body {
 }
 
 .time {
+  visibility: hidden;
   font-size: 1.5rem;
   position: absolute;
   top: 1rem;
-  right: 30%;
+  right: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .profile {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -61,4 +82,9 @@ body {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
+}
+
+.profile .details img {
+  width: 2rem;
+  height: 2rem;
 }
