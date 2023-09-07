@@ -9,22 +9,49 @@
   <body>
     <main>
       <div class="background">
+        <div class="time">
+          <p id="dayOfWeek" data-testid="currentDayOfTheWeek">
+            <!-- Display the day of the week here -->
+          </p>
+          <p id="currentTime" data-testid="currentUTCTime">
+            <!-- Display the current time here -->
+          </p>
+        </div>
         <div class="container">
-          <div id="datetime" class="time">
-            <!-- Display current date and time here -->
-          </div>
           <div class="profile">
             <img
               src="./images/Snapchat-2005957557.jpg"
               alt="slack display image"
               data-testid="slackDisplayImage"
             />
-            <div class="">
-              <h1 data-testid="slackUserName">Momoh Abdulsamad</h1>
-              <h3 data-testid="myTrack">
+            <div class="details">
+              <h1
+                class="hover-element"
+                style="color: #000"
+                data-testid="slackUserName"
+              >
+                <img src="./images/id-card.png" alt="name icon" />Momoh
+                Abdulsamad
+              </h1>
+
+              <h3
+                class="hover-element"
+                style="color: #e74c3c"
+                data-testid="myTrack"
+              >
+                <img src="./images/running-track.png" alt="track icon" />
                 Frontend Track | Video Editing Track
               </h3>
-              <a href="" target="_blank" data-testid="“githubURL”"></a>
+              <a
+                class="hover-element"
+                style="color: #3498db"
+                href="https://github.com/Samadeen/Task-1"
+                target="_blank"
+                data-testid="“githubURL”"
+              >
+                <img src="./images/github.png" alt="github png" />
+                Task Repository</a
+              >
             </div>
           </div>
           <!-- Your content goes here -->
