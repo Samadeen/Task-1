@@ -64,26 +64,28 @@ function displayDateTime() {
     weekday: 'long',
   });
 
-  const hour = currentDate
-    .getHours()
-    .toLocaleString('en-US', { hour: 'numeric' });
-  const minute = currentDate
-    .getMinutes()
-    .toLocaleString('en-US', { minute: 'numeric' });
-  const second = currentDate
-    .getSeconds()
-    .toLocaleString('en-US', { second: 'numeric' });
-
   // Create formatted strings
   const formattedDayOfWeek = `${dayOfWeek}`;
-  const formattedTime = `${hour}:${minute}:${second}`;
 
   // Display the day of the week and time on the webpage
   const dayOfWeekDiv = document.getElementById('dayOfWeek');
-  const currentTimeDiv = document.getElementById('currentTime');
 
   dayOfWeekDiv.textContent = formattedDayOfWeek;
-  currentTimeDiv.textContent = formattedTime;
+
+  const options = {
+    timeZone: 'UTC',
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  };
+
+  const formattedTime = currentDate.toLocaleTimeString('en-US', options);
+
+  // Display the current time in UTC milliseconds on the webpage
+  const currentTimeDiv = document.getElementById('currentTimeInMilliseconds');
+
+  currentTimeDiv.textContent = `Current UTC Time: ${formattedTime}`;
 }
 
 // Update the displayed date and time every second
