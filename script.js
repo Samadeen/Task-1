@@ -72,20 +72,12 @@ function displayDateTime() {
 
   dayOfWeekDiv.textContent = formattedDayOfWeek;
 
-  const options = {
-    timeZone: 'UTC',
-    hour12: false,
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-  };
-
-  const formattedTime = currentDate.toLocaleTimeString('en-US', options);
+  const currentTimeInMilliseconds = Date.now();
 
   // Display the current time in UTC milliseconds on the webpage
   const currentTimeDiv = document.getElementById('currentTimeInMilliseconds');
 
-  currentTimeDiv.textContent = `Current UTC Time: ${formattedTime}`;
+  currentTimeDiv.textContent = `Current UTC Time: ${currentTimeInMilliseconds}`;
 }
 
 // Update the displayed date and time every second
