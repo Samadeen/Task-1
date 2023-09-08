@@ -83,5 +83,5 @@ function displayDateTime() {
 // Update the displayed date and time every second
 setInterval(displayDateTime, 1000);
 
-// Initial call to displayDateTime function
+// Initial call to displayDateTime fn
 displayDateTime();
