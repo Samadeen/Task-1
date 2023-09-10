@@ -59,25 +59,33 @@ function displayDateTime() {
   // Get the current date and time
   const currentDate = new Date();
 
+  const daysOfWeek = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
   // Extract day of the week, hour, minute, and second
-  const dayOfWeek = currentDate.toLocaleDateString('en-US', {
-    weekday: 'long',
-  });
+  const currentDay = daysOfWeek[currentDate.getUTCDay()];
 
   // Create formatted strings
-  const formattedDayOfWeek = `${dayOfWeek}`;
+  const formattedDayOfWeek = `${currentDay}`;
 
   // Display the day of the week and time on the webpage
   const dayOfWeekDiv = document.getElementById('dayOfWeek');
 
   dayOfWeekDiv.textContent = formattedDayOfWeek;
 
-  const currentTimeInMilliseconds = Date.now();
+  const currentTimeInMilliseconds = new Date();
 
   // Display the current time in UTC milliseconds on the webpage
   const currentTimeDiv = document.getElementById('currentTimeInMilliseconds');
 
-  currentTimeDiv.textContent = `Current UTC Time: ${currentTimeInMilliseconds}`;
+  currentTimeDiv.textContent = `Current UTC Time: ${currentTimeInMilliseconds.getTime()}`;
 }
 
 // Update the displayed date and time every second
