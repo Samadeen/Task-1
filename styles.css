@@ -89,6 +89,12 @@ a {
   height: 2rem;
 }
 
+.gap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media (max-width: 520px) {
   .container {
     max-width: 90vw;
