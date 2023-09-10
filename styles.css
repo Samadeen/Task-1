@@ -88,3 +88,16 @@ a {
   width: 2rem;
   height: 2rem;
 }
+
+@media (max-width: 520px) {
+  .container {
+    max-width: 90vw;
+    top: 60%;
+  }
+
+  .time {
+    max-width: 90vw;
+    position: absolute;
+    top: 1rem;
+  }
+}
